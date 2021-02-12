@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/fragment_restaurants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.mainActivity.fragment.restaurantList.RestaurantListFragment"
+            android:orientation="vertical">
+
+                <!-- MESSAGE RECYCLER VIEW EMPTY -->
+                <TextView
+                    android:id="@+id/restaurants_text_view_recycler_view_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/default_large_margin"
+                    android:gravity="center"
+                    android:text="@string/restaurants_message_error"
+                    android:textAlignment="center" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_restaurants"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:context=".view.mainActivity.fragment.restaurantList.RestaurantListFragment"
+                    tools:listitem="@layout/restaurant_list_item" />
+        </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_txt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cl_txt2"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_name_restaurant_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_list_name_tv"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_star_like_list"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_name_restaurant_list"
+            app:layout_constraintStart_toEndOf="@+id/tv_name_restaurant_list"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/restaurant_list_star_iv" />
+
+        <TextView
+            android:id="@+id/tv_style_and_address_restaurant_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:singleLine="false"
+            android:text="@string/detail_address_restaurant_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_restaurant_list" />
+
+        <TextView
+            android:id="@+id/tv_hour_restaurant_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/restaurant_list_hour_tv"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_style_and_address_restaurant_list"
+            app:layout_constraintTop_toBottomOf="@+id/tv_style_and_address_restaurant_list" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_txt1"
+        app:layout_constraintEnd_toStartOf="@+id/iv_restaurant_list"
+        app:layout_constraintTop_toTopOf="@+id/cl_txt1">
+
+        <TextView
+            android:id="@+id/tv_distance_restaurant_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_list_distance_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_workmate_restaurant_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_distance_restaurant_list"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="@+id/tv_distance_restaurant_list"
+            app:layout_constraintTop_toBottomOf="@+id/tv_distance_restaurant_list"
+            app:srcCompat="@drawable/ic_baseline_person_outline_24"
+            android:contentDescription="@string/description_logo_restaurant_list"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tv_number_workmate_restaurant_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurant_list_number_workmate_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_workmate_restaurant_list"
+            app:layout_constraintStart_toEndOf="@+id/iv_workmate_restaurant_list"
+            app:layout_constraintTop_toTopOf="@+id/iv_workmate_restaurant_list" />
+
+        <ImageView
+            android:id="@+id/iv_notation_restaurant_list"
+            android:layout_width="wrap_content"
+            app:layout_constraintWidth_max="45dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_workmate_restaurant_list"
+            app:srcCompat="@drawable/ic_star_three"
+            android:contentDescription="@string/description_notation_restaurant_list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_restaurant_list"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_txt2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cl_txt2"
+        app:srcCompat="@drawable/ic_restaurant"
+        android:contentDescription="@string/description_restaurant_iv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<resources>
+
+    // --- INFO APP ---
+    <string name="app_name" translatable="false">Go4Lunch</string>
+    <string name="top_title">I am Hungry !</string>
+    <string name="error">An unknown error has occurred</string>
+    <string name="popup_perms">This app needs permission to work</string>
+    <string name="avertissement_permission">The application needs permission to launch …</string>
+
+    //-------------------
+    // MAIN ACTIVITY
+    // ------------------
+
+    // --- FRAGMENT LIST RESTAURANT ---
+
+    <string name="title_list_view">List View</string>
+    <string name="title_search_bar">Search restaurants</string>
+    <string name="detail_address_restaurant_tv">Pizza - 12 rue du faubourg Poissonnière</string>
+    <string name="restaurant_list_name_tv">OC Pizza</string>
+    <string name="restaurant_list_distance_tv">100m</string>
+    <string name="restaurant_list_number_workmate_tv">(3)</string>
+    <string name="restaurant_list_hour_tv">Open until 23pm</string>
+    <string name="title_search_toolbar">Search</string>
+    <string name="tilte_restaurant">Restaurant</string>
+    <string name="open_now">Open</string>
+    <string name="closing_soon">Close</string>
+    <string name="distance">m</string>
+    <string name="restaurant_list_star_iv">star like</string>
+    <string name="restaurants_message_error">There are no restaurants in the area, have you activated the location correctly ?</string>
+
+    // --- FRAGMENT MAP ---
+
+    <string name="title_map_view">Map View</string>
+
+    // --- FRAGMENT WORKMATES ---
+
+    <string name="title_workmates">Workmates</string>
+    <string name="detail_name_workmate_item_tv">Pierre is eating at OC Pizza \</string>
+    <string name="title_fragment_workmates">Available workmates</string>
+    <string name="workmates_message_error">You are alone on this application</string>
+
+
+    // --- SETTING ---
+    <string name="title_toolbar_option">Option</string>
+    <string name="drawenr_open">Open menu</string>
+    <string name="drawer_close">Close menu</string>
+    <string name="menu_setting_your_lunch">YOUR LUNCH</string>
+    <string name="menu_setting_settings">SETTINGS</string>
+    <string name="menu_setting_logout">LOGOUT</string>
+    <string name="menu_setting_email">Email</string>
+    <string name="menu_setting_name">Name</string>
+
+    <string name="setting_title_popup">Setting</string>
+    <string name="delete">Delete</string>
+    <string name="notification_delete_account">Are you sure you want to delete your account? This choice will be final</string>
+    <string name="setting_no">NO</string>
+
+
+    //-------------------
+    // DETAIL RESTAURANT
+    // ------------------
+    <string name="detail_call_tv">CALL</string>
+    <string name="detail_like_tv">LIKE</string>
+    <string name="detail_web_tv">WEB</string>
+    <string name="message_detail_web_btn">This restaurant does not have a website</string>
+    <string name="message_detail_phone_btn">This restaurant does not have a phone number</string>
+    <string name="detail_adapter_workmate">\ is joining ! \</string>
+    <string name="workmate_adapter_not_decided">\ hasn\'t decided yet. \</string>
+    <string name="workmate_adapter_eating">\ is eating at \</string>
+    <string name="detail_message_error">None of your Workmate eat at this restaurant yet, but be the first to do so…</string>
+
+    //-------------------
+    // CHAT
+    // ------------------
+
+    <string name="chat_message_error_tv">This discussion thread does not contain any messages at the moment..</string>
+    <string name="chat_message_editTx">Compose your message</string>
+    <string name="toast_choose_image">No image chosen</string>
+    <string name="not_chosen_restaurant_workmate">Your Workmate has not yet chosen his restaurant.</string>
+    <string name="menu_detail_his_lunch">HIS LUNCH</string>
+
+    //-------------------
+    // NOTIFICATION
+    // ------------------
+
+    <string name="title_notification">You have received a new notification</string>
+    <string name="channelId">fcm_default_channel</string>
+    <string name="channelName">Message from Firebase</string>
+    <string name="notification_workmate_eating">\You will eat with: \</string>
+    <string name="comma">\, \</string>
+    <string name="point">\. \</string>
+
+    <string name="not_chosen_restaurant">You have not yet chosen a restaurant.</string>
+    <string name="notification_not_chosen_1">You haven\'t chosen a restaurant yet.</string>
+    <string name="notification_not_chosen_2">Join in with your workmates,</string>
+    <string name="notification_not_chosen_3">if you don\'t want to eat alone</string>
+
+    <string name="notification_eatAt">You will eat at\</string>
+
+    <string name="notificationResetPlace_1">, you can choose your restaurant</string>
+    <string name="notificationResetPlace_2">Again for midday tomorrow ;)</string>
+
+    //-------------------
+    // DESCRIPTION
+    // ------------------
+    <string name="description_preview_image_chosen">preview image chosen</string>
+    <string name="description_file_btn">Button add file</string>
+    <string name="description_send_btn">button send</string>
+    <string name="description_logo_restaurant_list">logo_workmate</string>
+    <string name="description_restaurant_iv">image restaurant</string>
+    <string name="description_logo_app">logo Go4Lunch</string>
+    <string name="description_star_iv">image_star</string>
+    <string name="description_phone_iv">image phone</string>
+    <string name="description_earth_iv">image earth</string>
+    <string name="toolbar_search_hint">toolbar_shearch_hint</string>
+    <string name="menu_setting_title">SETTING</string>
+    <string name="search_menu">search menu</string>
+    <string name="description_notation_restaurant_list">star notation</string>
+    <string name="description_avatar_workmate_iv">avatar workmate</string>
+    <string name="description_iv_image_sent">image sent in chat</string>
+    <string name="description_image_profile">image profile in chat</string>
+    <string name="description_validate_btn">validate btn</string>
+
+</resources>

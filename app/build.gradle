@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.adriansng.projet_7_go4lunch"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        resConfigs "en","fr"
+
+        Properties secureProps = new Properties()
+        if (file("../local.properties").exists()) {
+            file("../local.properties")?.withInputStream { secureProps.load(it) }
+        }
+        buildConfigField("String", "MAPS_API_KEY", (secureProps.getProperty("MAPS_API_KEY")))
+        resValue "string", "maps_api_key", (secureProps.getProperty("MAPS_API_KEY") ?: "")
+        resValue "string", "facebook_application_id", (secureProps.getProperty("FACEBOOK_APPLICATION_ID") ?: "")
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //NAVIGATION
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+
+    //BOTTOM NAVIGATION VIEW
+    implementation 'com.google.android.material:material:1.2.1'
+
+    //VIEW MODEL PROVIDERS
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //ACTIVITY
+    implementation "androidx.activity:activity-ktx:1.1.0"
+    implementation "androidx.activity:activity:1.2.0-rc01"
+
+    //FRAGMENT
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    implementation "androidx.fragment:fragment:1.3.0-rc01"
+
+    //ANNOTATION
+    implementation 'org.jetbrains:annotations:15.0'
+
+    //EASY PERMISSIONS
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //FIREBASE ANALYTICS
+    implementation 'com.google.firebase:firebase-analytics:18.0.1'
+
+    //FIREBASE MESSAGING
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+
+    //FIREBASE AUTH
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+
+    //FIREBASE STORE
+    implementation 'com.firebaseui:firebase-ui-firestore:5.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+
+    //FACEBOOK
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+
+    //BUTTERKNIFE
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    //GOOGLE MAP
+    implementation "com.google.android.gms:play-services-maps:17.0.0"
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation "com.google.android.gms:play-services-location:17.1.0"
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+    //GLIDE
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //RETROFIT
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+
+    //WORK MANAGER
+    implementation "android.arch.work:work-runtime:1.0.1"
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
+    //TEST UNIT
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.23.4'
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+    testImplementation "org.mockito:mockito-inline:2.13.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    //TEST ANDROID
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+
+    //MULTI DEX
+    implementation 'com.android.support:multidex:1.0.3'
+}
