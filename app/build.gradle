@@ -76,13 +76,13 @@ dependencies {
     implementation 'pub.devrel:easypermissions:3.0.0'
 
     //FIREBASE ANALYTICS
-    implementation 'com.google.firebase:firebase-analytics:18.0.1'
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
 
     //FIREBASE MESSAGING
     implementation 'com.google.firebase:firebase-messaging:21.0.1'
 
     //FIREBASE AUTH
-    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
     implementation 'com.google.firebase:firebase-auth:20.0.2'
     implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
 
