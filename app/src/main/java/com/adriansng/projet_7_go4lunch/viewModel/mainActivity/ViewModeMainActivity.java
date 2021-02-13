@@ -12,6 +12,7 @@ import com.adriansng.projet_7_go4lunch.model.Workmate;
 import com.adriansng.projet_7_go4lunch.repositories.PlacesRepository;
 import com.adriansng.projet_7_go4lunch.repositories.WorkmatesRepository;
 import com.adriansng.projet_7_go4lunch.utils.Utils;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
@@ -166,6 +167,21 @@ public class ViewModeMainActivity extends ViewModel  {
 
     private void setListWorkmates(MutableLiveData<List<Workmate>> listWorkmates) {
         this.listWorkmates = listWorkmates;
+    }
+
+    public void deleteWorkmateLoggedToList(List<Workmate> workmates){
+        int indexDelete = -1;
+        String uidWorkmateLogged = FirebaseAuth.getInstance().getUid();
+        int size = workmates.size();
+        for (int i = 0; i < size; i++) {
+            String id = workmates.get(i).getUid();
+            if(id.equals(uidWorkmateLogged)){
+               indexDelete = i;
+            }
+        }
+        if(indexDelete != -1) {
+            workmates.remove(indexDelete);
+        }
     }
 
     // --- CHECK VALIDATE ---

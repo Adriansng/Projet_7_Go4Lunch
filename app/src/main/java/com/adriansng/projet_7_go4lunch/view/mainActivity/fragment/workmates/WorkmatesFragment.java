@@ -72,6 +72,7 @@ public class WorkmatesFragment extends Fragment  {
     private void getWorkmates() {
         viewModeMainActivity.getWorkmates().observe(getViewLifecycleOwner(), workmates -> {
             workmateList = workmates;
+            viewModeMainActivity.deleteWorkmateLoggedToList(workmateList);
             configRecyclerView();
         });
     }
